@@ -1,81 +1,60 @@
-### PINN文章代码合集
+### NeurIPS-2024【初选，还要细细的筛选】
 
-可能最后的研究方向就是做PINN了，虽然不是很喜欢这个方向，但是路还是要走下去的:crying_cat_face:
+- ChaosBench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate
+  Prediction[[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4d3684dd7926754b48bc6cd99a840232-Abstract-Datasets_and_Benchmarks_Track.html)] [[code](https://leap-stc.github.io/ChaosBench/README.html)]
 
-本博客更新一些我看到的有关PINN的文章【所有文章都有代码~】
+  对上述文章的简要说明：和PINN的核心概念不同，不涉及PDE方程，仅仅是引入了物理量
 
-**1.CONFIG: TOWARDS CONFLICT-FREE TRAINING OF PHYSICS INFORMED NEURAL NETWORKS**
+- Neural Pfaffians: Solving Many Many-Electron Schrödinger Equations [[paper](https://nips.cc/virtual/2024/oral/97987)]
 
-文章地址：https://arxiv.org/pdf/2408.11104
+  是否是PINN的方法存疑
 
-代码地址：https://tum-pbs.github.io/ConFIG/
+- Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators [[paper](https://nips.cc/virtual/2024/oral/97986)] [[code](https://github.com/sail-sg/stde)]
 
-简介：可以用来处理损失冲突问题，我用的效果挺好的。
+  神经算子的方法，best paper
 
-**2.Hidden  fluid mechanics: Learning velocity and pressure fields from flow  visualizations**
+- How does PDE order affect the convergence of PINNs? [[paper](https://neurips.cc/virtual/2024/poster/96377)]
 
-文章地址：https://www.science.org/doi/full/10.1126/science.aaw4741
+  说明文
 
-代码地址：[GitHub - maziarraissi/HFM: Hidden   Fluid Mechanics](https://github.com/maziarraissi/HFM)
+- RoPINN: Region Optimized Physics-Informed Neural Networks [[paper](https://neurips.cc/virtual/2024/poster/93144)] [[code](https://github.com/thuml/RoPINN)]
 
-简介：可以读一读，少量数据驱动+控制方程。
+  这篇文章是清华大学的的文章，对于这篇文章可以仔细的看看
 
-**3.PhyCRNet:  Physics-informed Convolutional-Recurrent Network for Solving      Spatiotemporal PDEs**
+- PINNacle: A Comprehensive Benchmark of Physics-Informed Neural Networks for Solving PDEs [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/8c63299fb2820ef41cb05e2ff11836f5-Abstract-Datasets_and_Benchmarks_Track.html)] [[code](https://github.com/i207M/PINNacle)]
 
-文章地址：https://arxiv.org/pdf/2106.14103
+- Towards Universal Mesh Movement Networks [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/1b0da24d136f46bfaee78e8da907127e-Abstract-Conference.html)] [[code](https://github.com/mesh-adaptation/UM2N)]
 
-代码地址：[https://github.com/isds-neu/PhyCRNet](https://github.com/maziarraissi/HFM)
+  这是解PDE方程的，是否于PINN相关，应该有关吧
 
-简介：LSTM+PINN的合体，有研究意义，同时如何将传统的MLP转化为CNN的格式，甚至于Transformer的格式有启发意义。
+- Nonlocal Attention Operator: Materializing Hidden Knowledge Towards Interpretable Physics Discovery [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/ce5b4f79f4752b7f8e983a80ebcd9c7a-Abstract-Conference.html)] [[code](https://github.com/fishmoon1234/NAO)]
 
-**4.Finite basis physics-informed neural networks (FBPINNs)**
+  
 
-文章地址：[Finite   basis physics-informed neural networks (FBPINNs): a scalable domain   decomposition approach for solving differential equations | Advances in   Computational Mathematics](https://link.springer.com/article/10.1007/s10444-023-10065-9)
+- Optimal deep learning of holomorphic operators between Banach spaces [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/3100d29d662360bb1a40a5ded8e100ae-Abstract-Conference.html)] 
 
-代码地址：[[GitHub - benmoseley/FBPINNs: Solve forward and inverse problems related to partial differential equations using finite basis physics-informed neural networks (FBPINNs)](https://github.com/benmoseley/FBPINNs?tab=readme-ov-file)](https://github.com/maziarraissi/HFM)
+- Learning to Predict Structural Vibrations [[paper](https://nips.cc/virtual/2024/poster/94031)] [[code](https://github.com/ecker-lab/Learning_Vibrating_Plates)]
 
-简介：将问题域划分成一个一个小的子域，有利于解决频谱偏差问题。
+  神经算子的方法
 
-**5.GPT-PINN:  Generative Pre-Trained Physics-Informed Neural      Networks toward non-intrusive  Meta-learning of parametric PDEs**
+- PACE: Pacing Operator Learning to Accurate Optical Field Simulation for Complicated Photonic Devices [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/7cc16e8635e6f27c295355bd214ef8d8-Abstract-Conference.html)] [[code](https://github.com/zhuhanqing/PACE-Light)]
 
-文章地址：[https://arxiv.org/pdf/2303.14878](https://link.springer.com/article/10.1007/s10444-023-10065-9)
+  神经算子的方法
 
-代码地址：https://github.com/skoohy/GPT-PINN
+- Latent Neural Operator for Solving Forward and Inverse PDE Problems [[paper](https://nips.cc/virtual/2024/poster/94908)] [[code](https://github.com/L-I-M-I-T/LatentNeuralOperator)]
 
-简介：考虑PINN的泛化能力，完成模型在新的条件之下快速的训练
+  神经算子的方法
 
-**6.On the preprocessing of physics-informed neural networks: How to better utilize data in fluid mechanics**
+- Can neural operators always be continuously discretized? [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/b31f6d65f2584b3c4347148db36fe07f-Abstract-Conference.html)] 
 
-文章地址：[https://www.sciencedirect.com/science/article/pii/S0021999125001202?via%3Dihub#ab0020](https://link.springer.com/article/10.1007/s10444-023-10065-9)
+  算是一个证明吧
 
-代码地址：https://github.com/Shengfeng233/PINN-Preprocess
+- Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators [[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/dd2eb5250696753ea37141bbd89bb569-Abstract-Conference.html)] [[code](https://github.com/sail-sg/stde)]
 
-简介：考虑数据预处理，如归一化，这篇文章中提到的一些方法可以去借鉴一下已投入大量精力改善_PINNs_的可训练性，例如领域分解、并行计算、尊重因果关系的自适应抽样、混合数值方案、复杂几何的位置信息编码等。虽然这些改进中的许多是参考传统数值方法开发的，但实际上，_PINNs_也可以通过采用主流机器学习算法的一些“技巧”来增强，例如自适应激活函数、自适应加权、迁移学习等。
+-  Amortized Fourier Neural Operators[[paper](https://neurips.cc/virtual/2024/poster/94587)]
 
-**7.Meta  Learning for Improved Neural Network Wavefield Solutions**
+- Pretraining Codomain Attention Neural Operators for Solving Multiphysics PDEs [[paper](https://neurips.cc/virtual/2024/poster/93155)] [[code](https://github.com/neuraloperator/CoDA-NO)]
 
-文章地址：[https://www.sciencedirect.com/science/article/pii/S0021999125001202?via%3Dihub#ab0020](https://link.springer.com/article/10.1007/s10444-023-10065-9)
+- Universal Physics Transformers: A Framework For Efficiently Scaling Neural Operators[[paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/2cd36d327f33d47b372d4711edd08de0-Abstract-Conference.html)] [[code](https://ml-jku.github.io/UPT/)]
 
-代码地址：https://github.com/Shengfeng233/PINN-Preprocess
-
-简介：对于地震波的预测，可以借鉴里面元学习的方法
-
-**8.An Expert's Guide to Training Physics-informed Neural Networks**
-
-文章地址：[[2308.08468\] An Expert's Guide to Training Physics-informed Neural Networks](https://arxiv.org/abs/2308.08468)
-
-代码地址：[GitHub - PredictiveIntelligenceLab/jaxpi](https://github.com/PredictiveIntelligenceLab/jaxpi)
-
-简介：这里面涉及到了有关PINN预处理以及加速收敛的知识，是一个很好的用于PINN的库
-
-**9.PINNacle: A Comprehensive Benchmark of Physics-Informed Neural Networks for Solving PDEs**
-
-文章地址：[[2306.08827\] PINNacle: A Comprehensive Benchmark of Physics-Informed Neural Networks for Solving PDEs](https://arxiv.org/abs/2306.08827)https://arxiv.org/abs/2308.08468)
-
-代码地址：[GitHub - i207M/PINNacle: Codebase for PINNacle: A Comprehensive Benchmark of Physics-Informed Neural Networks for Solving PDEs.](https://github.com/i207M/PINNacle?tab=readme-ov-file)
-
-简介：这里面涉及到了有关PINN预处理以及加速收敛的知识，是一个很好的用于PINN的库
-
-许多PINN论文是没有代码的，这里只列举了有代码的PINN，其实有些简单的PINN自己可以手动的尝试从0开始构建，还是不难的~
-
-持续更新中,欢迎对博客内容提意见:hugs:
+  
